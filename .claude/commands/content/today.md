@@ -1,65 +1,71 @@
 ---
 name: content:today
-description: Daily content briefing — what needs attention
+description: Daily content briefing — what you need to do today
 argument-hint: "<workspace-name>"
 ---
 <objective>
-Daily action briefing. What's due, what's performing, what needs attention. Start every day here.
+Daily content operations briefing. Shows what needs attention right now.
 
 Workspace: $ARGUMENTS
 </objective>
 
+<execution_context>
+@./.claude/contentos/references/defaults.md
+</execution_context>
+
 <process>
-1. Display mode header: `<< CONTENT:OS // TODAY >>`
-2. Load workspace context: CALENDAR.md, PERFORMANCE.md, LEARNINGS.md, ROADMAP.md, CHANNELS.md
-3. Check all sources and build the briefing:
+1. Display: `<< CONTENT:OS // TODAY >>`
+2. Load workspace context — CALENDAR.md, CHANNELS.md, BRAND.md, METRICS.md, LEARNINGS.md
+3. Load content calendar for today and this week
 
-## Urgency tiers
+## Publishing schedule
+4. Show content due today:
+   - Blog posts scheduled for publish
+   - Social posts queued
+   - Newsletter drafts due
+   - Content in review/approval pipeline
 
-### 🔴 DO NOW
-- Content due today that isn't published
-- Trending topics with time-sensitive opportunity
-- Engagement spikes that need responses (comments, mentions)
-- Content with errors live on site
+## Content pipeline
+5. Show pipeline status:
+   - Briefs waiting for writing
+   - Drafts in progress
+   - Content in review
+   - Approved and ready to publish
+   - Overdue items (flagged)
 
-### 🟡 TODAY
-- Content in review that needs approval
-- Scheduled posts to verify
-- Social engagement to respond to
-- Newsletter draft due this week
-- Performance alerts (traffic drops, ranking changes)
+## Performance pulse
+6. Show key metrics from last 24-48 hours:
+   - Top performing content (engagement, traffic, shares)
+   - Underperforming content (flag if below benchmarks)
+   - SEO movement (ranking changes, new keywords)
+   - Social engagement rate
 
-### 🟢 THIS WEEK
-- Upcoming content calendar items
-- Keyword opportunities from search console
-- Competitor content moves
-- Roadmap to-dos
-- Content to repurpose
+## Engagement
+7. Show pending engagement:
+   - Comments needing replies
+   - Community posts needing response
+   - Competitor content worth noting
 
-4. Display:
+## This week ahead
+8. Show upcoming deadlines this week
+9. Flag any gaps in content calendar
+
+## Actions
+10. Suggest top 3 actions for today based on urgency:
+    - Overdue items first
+    - Publishing deadlines
+    - Engagement opportunities
+
+11. Display:
 ```
-  ┌─ TODAY ── {date} ──────────────────────────────┐
-  │                                                 │
-  │  🔴 DO NOW                                     │
-  │  • {urgent item}                                │
-  │                                                 │
-  │  🟡 TODAY                                      │
-  │  • {item}                                       │
-  │                                                 │
-  │  🟢 THIS WEEK                                  │
-  │  • {item}                                       │
-  │                                                 │
-  │  📊 Quick stats (vs last week)                  │
-  │  Traffic: {n} ({+/-n%})                         │
-  │  Engagement: {n} ({+/-n%})                      │
-  │  Subscribers: {n} ({+/-n%})                     │
-  │                                                 │
-  └─────────────────────────────────────────────────┘
-```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-5. Role-aware emphasis:
-   - **Content Creator:** Focus on drafts due, briefs to pick up
-   - **Social Media Manager:** Focus on posting schedule, engagement
-   - **SEO Specialist:** Focus on ranking changes, technical issues
-   - **Head of Content:** Focus on pipeline, team blockers, KPIs
+  Quick actions:
+  >> /content:write — draft content
+  >> /content:publish — publish ready content
+  >> /content:social — create social posts
+  >> /content:calendar — manage content calendar
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 </process>

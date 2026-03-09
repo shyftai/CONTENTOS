@@ -89,6 +89,7 @@ Then show the quick commands reference:
   │  Measure    /content:analytics · /content:report      │
   │  Review     /content:review · /content:debrief        │
   │  Newsletter /content:newsletter                      │
+  │  Scale      /content:swarm                             │
   │  Agency     /content:portfolio                       │
   │  More       /content:status for all commands          │
   │                                                      │
@@ -297,6 +298,11 @@ CONTENT:OS supports two execution modes, configured per workspace in `workspace.
 | Command | What it does |
 |---------|-------------|
 | `/content:newsletter` | Create email newsletter content |
+
+### Scale
+| Command | What it does |
+|---------|-------------|
+| `/content:swarm` | Run content operations with parallel agents |
 
 ### Agency
 | Command | What it does |

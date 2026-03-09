@@ -54,6 +54,9 @@ Display all available CONTENT:OS commands with descriptions.
   │  /content:debrief     Performance retrospective    │
   │  /content:compliance  Compliance & brand safety    │
   │                                                 │
+  │  SCALE                                         │
+  │  /content:swarm       Parallel agent operations    │
+  │                                                 │
   │  OTHER                                         │
   │  /content:newsletter  Email newsletter content     │
   │  /content:portfolio   Multi-brand dashboard        │
