@@ -52,10 +52,12 @@ Display all available CONTENT:OS commands with descriptions.
   │  REVIEW                                        │
   │  /content:review      Quality check content       │
   │  /content:debrief     Performance retrospective    │
+  │  /content:compliance  Compliance & brand safety    │
   │                                                 │
   │  OTHER                                         │
   │  /content:newsletter  Email newsletter content     │
   │  /content:portfolio   Multi-brand dashboard        │
+  │  /content:feedback    Feedback, bugs, requests     │
   │  /content:status      This command list            │
   │                                                 │
   └─────────────────────────────────────────────────┘

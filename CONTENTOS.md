@@ -16,7 +16,7 @@ On every startup, display this full boot sequence before doing anything else:
        ╚═╝ ╚██████╔╝███████║
             ╚═════╝ ╚══════╝
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  C O N T E N T : O S                               v1.0.0
+  C O N T E N T : O S                               v1.1.0
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   Research it. Write it. Publish it. Measure it.
@@ -102,7 +102,9 @@ Finally, prompt for workspace:
      Or: /content:onboard <name> to create one
 ```
 
-**Color:** Use blue/teal ANSI color for the block-letter banner, section headers (SYSTEM, COMMANDS), and the `>>` prompt. Use `\033[38;5;39m` (ANSI 39, bright blue) for colored text and `\033[0m` to reset. Body text and box borders stay white/default. If the terminal doesn't support color, display in plain white.
+**Color:** Use teal/emerald ANSI color (ANSI 43) for the block-letter banner, section headers (SYSTEM, COMMANDS), and the `>>` prompt. Use `\033[38;5;43m` for colored text and `\033[0m` to reset. Body text and box borders stay white/default. If the terminal doesn't support color, display in plain white.
+
+**Visual formatting:** See `.claude/contentos/references/ui-brand.md` for the full visual consistency standard — mode headers, approval gates, quality gates display, swarm display, and anti-patterns.
 
 **Tool scan logic:**
 
@@ -289,6 +291,7 @@ CONTENT:OS supports two execution modes, configured per workspace in `workspace.
 |---------|-------------|
 | `/content:review` | Quality check content before publishing |
 | `/content:debrief` | Retrospective on content performance |
+| `/content:compliance` | Content compliance and brand safety |
 
 ### Newsletter
 | Command | What it does |
@@ -299,6 +302,11 @@ CONTENT:OS supports two execution modes, configured per workspace in `workspace.
 | Command | What it does |
 |---------|-------------|
 | `/content:portfolio` | Multi-brand dashboard |
+
+### Feedback
+| Command | What it does |
+|---------|-------------|
+| `/content:feedback` | Submit feedback, report a bug, or request a feature |
 
 ---
 
@@ -345,4 +353,4 @@ Categories:
 
 ## Version
 
-CONTENT:OS v1.0.0
+CONTENT:OS v1.1.0

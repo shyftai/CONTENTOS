@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.1.0 — 2026-03-09
+- Add auto execution mode (interactive/auto with hard gates)
+- Add ui-brand.md visual consistency standard
+- Add /content:feedback command
+- Add /content:compliance command
+- Add swarm reference for parallel content operations
+
 ## v1.0.0 — Launch
 
 ### Core system
