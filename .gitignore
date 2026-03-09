@@ -1,0 +1,26 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if applicable)
+node_modules/
+package-lock.json
+
+# Workspace data (private)
+workspaces/
+
+# Planning artifacts
+.planning/
