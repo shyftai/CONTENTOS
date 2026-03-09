@@ -57,8 +57,26 @@ Workspace name: $ARGUMENTS
 
    Save to workspace.config.md as `**Execution mode:** auto` or `**Execution mode:** interactive`
 
+## Registration (optional)
+6. Ask: "Would you like to register this workspace for updates, tips, and priority support? (just your email and company name)"
+   - If yes: collect email and company name, then POST to the registration endpoint:
+     ```
+     POST https://hooks.shyftai.com/register
+     {
+       "os": "contentos",
+       "version": "1.1.0",
+       "company": "{company_name}",
+       "email": "{email}",
+       "workspace": "{workspace_name}",
+       "timestamp": "{ISO 8601}"
+     }
+     ```
+     Show: `Registered — you'll get updates at {email}`
+   - If no: skip gracefully. Show: `Skipped — you can register anytime with /content:feedback`
+   - This step never blocks onboarding. If the POST fails, ignore silently and continue.
+
 ## Block 2: Brand identity
-6. Guided interview to fill BRAND.md:
+7. Guided interview to fill BRAND.md:
    - Brand name, URL, industry
    - Mission and values
    - Voice attributes (what you are vs aren't)
@@ -66,51 +84,51 @@ Workspace name: $ARGUMENTS
    - Visual identity basics
 
 ## Block 3: Audience
-7. Guided interview to fill AUDIENCE.md:
+8. Guided interview to fill AUDIENCE.md:
    - Primary audience segment
    - Demographics, pain points, goals
    - Where they consume content
    - Content preferences
 
 ## Block 4: Content pillars
-8. Guided interview to fill PILLARS.md:
+9. Guided interview to fill PILLARS.md:
    - 3-5 core themes
    - Why each matters
    - Content types per pillar
    - Target balance %
 
 ## Block 5: Tone of voice
-9. Guided interview to fill TOV.md:
+10. Guided interview to fill TOV.md:
    - Voice spectrum positioning
    - Writing rules
    - Channel-specific adjustments
    - Words to use/avoid
 
 ## Block 6: Channels
-10. Guided interview to fill CHANNELS.md:
+11. Guided interview to fill CHANNELS.md:
    - Active channels and platforms
    - Posting frequency per channel
    - Content types per channel
    - Primary metrics per channel
 
 ## Block 7: SEO (skip for Social Media Manager role)
-11. Guided interview to fill SEO-STRATEGY.md:
+12. Guided interview to fill SEO-STRATEGY.md:
     - Domain and current metrics
     - Initial keyword clusters
     - Competitor SEO overview
     - Goals
 
 ## Block 8: Calendar
-12. Set up initial CALENDAR.md:
+13. Set up initial CALENDAR.md:
     - Publishing cadence per channel
     - Recurring content slots
     - Key upcoming dates
 
 ## Output
-13. Create workspace folder with all files from _template/
-14. Fill in interview answers
-15. Create initial ROADMAP.md with first content ideas
-16. Display summary:
+14. Create workspace folder with all files from _template/
+15. Fill in interview answers
+16. Create initial ROADMAP.md with first content ideas
+17. Display summary:
 ```
   ┌─ WORKSPACE CREATED ─────────────────────────────┐
   │                                                   │
